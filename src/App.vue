@@ -6,7 +6,8 @@
 </template>
 
 <script>
-import Maintabbar from './components/tabbar/Maintabbar.vue';
+import Maintabbar from 'components/content/tabbar/Maintabbar';
+import Navbar from './components/content/navbar/navbar.vue';
 
 export default {
   data() {
@@ -14,18 +15,13 @@ export default {
       
     }
   },
-  components: {  Maintabbar }
+  components: { Maintabbar, Navbar,  }
 }
 </script>
 
-<style lang="less" scoped>
-  .app {
-    height: 800px;
+<style>
   
-    
-  
-}
-  @import "./assets/css/base.css"
+  @import "assets/css/base.css"
 
 
 

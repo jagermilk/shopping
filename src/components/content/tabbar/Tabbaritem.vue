@@ -40,6 +40,6 @@ export default {
 }
 
 .isActive {
-    color: rgb(98, 159, 98);
+    color:rgb(236, 177, 177);
 }
 </style>
