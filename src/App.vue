@@ -19,12 +19,14 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.app {
-  height: 800px;
-
+  .app {
+    height: 800px;
   
-
+    
+  
 }
+  @import "./assets/css/base.css"
+
 
 
 </style>
