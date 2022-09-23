@@ -10,11 +10,8 @@ import Maintabbar from 'components/content/tabbar/Maintabbar';
 import Navbar from './components/content/navbar/navbar.vue';
 
 export default {
-  data() {
-    return {
-      
-    }
-  },
+
+
   components: { Maintabbar, Navbar,  }
 }
 </script>

@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from "vue-router";
-const home = () => import("../views/home.vue");
+const home = () => import("../views/home/home.vue");
 const goods = () => import("../views/goods.vue");
 const car = () => import("../views/car.vue");
 const profile = () => import("../views/profile.vue");
