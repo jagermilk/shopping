@@ -1,14 +1,11 @@
 <template>
-    <div class="goodlistitem">
+    <div class="goodlistitem" @click="getid">
         <div class="gooditem">
-            <a :href="goodItem.clientUrl">
-                <img :src="goodItem.show.img" alt=""/>
-            </a>
-            
+                <img :src="goodItem.show.img" alt=""/>         
             <p>{{goodItem.title}}</p>
             <div class="gooddetail">
                 
-                <span>💰{{goodItem.price}}</span>
+                <span>¥{{goodItem.price}}</span>
             <span>🌟{{goodItem.cfav}}</span>
            
             
@@ -27,6 +24,11 @@ export default {
             default() {
                 return {}
             }
+        }
+    },
+    methods:{
+        getid(){
+            this.$router.push('/detail/'+this.goodItem.iid)
         }
     }
 }

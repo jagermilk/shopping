@@ -3,10 +3,10 @@
         <Tabbar>
             <Tabbaritem link="/home">
                 <template v-slot:item-icon>
-                    <img src="@/assets/logo.png" alt="">
+                    <img src="@/assets/img/tabbar/home.svg" alt="">
                 </template>
                 <template v-slot:item-icon-active>
-                    <img src="@/assets/logo.png" alt="">
+                    <img src="@/assets/img/tabbar/home_active.svg" alt="">
                 </template>
                 <template v-slot:item-name>
                     <h5>首页</h5>
@@ -15,10 +15,10 @@
 
             <Tabbaritem link="/goods">
                 <template v-slot:item-icon>
-                    <img src="@/assets/logo.png" alt="">
+                    <img src="@/assets/img/tabbar/category.svg" alt="">
                 </template>
                 <template v-slot:item-icon-active>
-                    <img src="@/assets/logo.png" alt="">
+                    <img src="@/assets/img/tabbar/category_active.svg" alt="">
                 </template>
                 <template v-slot:item-name>
                     <h5>商品</h5>
@@ -26,10 +26,10 @@
             </Tabbaritem>
             <Tabbaritem link="/car">
                 <template v-slot:item-icon>
-                    <img src="@/assets/logo.png" alt="">
+                    <img src="@/assets/img/tabbar/shopcart.svg" alt="">
                 </template>
                 <template v-slot:item-icon-active>
-                    <img src="@/assets/logo.png" alt="">
+                    <img src="@/assets/img/tabbar/shopcart_active.svg" alt="">
                 </template>
                 <template v-slot:item-name>
                     <h5>购物车</h5>
@@ -37,10 +37,10 @@
             </Tabbaritem>
             <Tabbaritem link="/profile">
                 <template v-slot:item-icon>
-                    <img src="@/assets/logo.png" alt="">
+                    <img src="@/assets/img/tabbar/profile.svg" alt="">
                 </template>
                 <template v-slot:item-icon-active>
-                    <img src="@/assets/logo.png" alt="">
+                    <img src="@/assets/img/tabbar/shopcart_active.svg" alt="">
                 </template>
                 <template v-slot:item-name>
                     <h5>个人中心</h5>

@@ -1,10 +1,10 @@
 <template>
     <div class="tabbaritem">
         <div @click="routerlink">
-            <div v-if="active">
+            <div v-if="!active">
                 <slot name="item-icon"></slot>
             </div>
-            <div v-if="!active">
+            <div v-if="active">
                 <slot name="item-icon-active"></slot>
             </div>
 
@@ -40,6 +40,6 @@ export default {
 }
 
 .isActive {
-    color:rgb(236, 177, 177);
+    color:rgb(255, 110, 134);
 }
 </style>

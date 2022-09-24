@@ -36,10 +36,12 @@ export default {
 
 <style lang="less" scoped>
     .tabcontrol{
+        
         display: flex;
         justify-content: center;
         align-items: center;
         div{
+            background-image: linear-gradient(200grad, rgb(255, 209, 209), rgb(255, 255, 255));
             flex:1;
             text-align: center;
             height: 40px;
@@ -52,7 +54,7 @@ export default {
         }
     }
     .active span{
-        color: pink;
-        border-bottom: 3px pink solid;
+        color:rgb(255, 110, 134);
+        border-bottom: 3px solid rgb(255, 110, 134);
     }
 </style>
