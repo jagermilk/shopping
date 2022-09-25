@@ -4,36 +4,36 @@
             <div class="left">
                 <Tabbaritem link="/home">
                     <template v-slot:item-icon>
-                        <img src="@/assets/img/tabbar/home.svg" alt="">
+                        <div class="icon1"></div>
                     </template>
                     <template v-slot:item-icon-active>
-                        <img src="@/assets/img/tabbar/home_active.svg" alt="">
+                        <div class="icon1"></div>
                     </template>
                     <template v-slot:item-name>
-                        <h5>首页</h5>
+                        <h5>客服</h5>
                     </template>
                 </Tabbaritem>
 
                 <Tabbaritem link="/goods">
                     <template v-slot:item-icon>
-                        <img src="@/assets/img/tabbar/category.svg" alt="">
+                        <div class="icon2"></div>
                     </template>
                     <template v-slot:item-icon-active>
-                        <img src="@/assets/img/tabbar/category_active.svg" alt="">
+                        <div class="icon2"></div>
                     </template>
                     <template v-slot:item-name>
-                        <h5>商品</h5>
+                        <h5>店铺</h5>
                     </template>
                 </Tabbaritem>
                 <Tabbaritem link="/car">
                     <template v-slot:item-icon>
-                        <img src="@/assets/img/tabbar/shopcart.svg" alt="">
+                        <div class="icon3"></div>
                     </template>
                     <template v-slot:item-icon-active>
-                        <img src="@/assets/img/tabbar/shopcart_active.svg" alt="">
+                        <div class="icon4"></div>
                     </template>
                     <template v-slot:item-name>
-                        <h5>购物车</h5>
+                        <h5>收藏</h5>
                     </template>
                 </Tabbaritem>
             </div>
@@ -60,45 +60,89 @@ export default {
 <style lang="less" scoped>
 .bottombar {
     height: 49px;
-
-
+    width: 100%;
 
     .tabbar {
         display: flex;
         flex-direction: row;
-        justify-content: space-evenly;
+        justify-content: space-between !important;
         align-items: center;
-        .left { 
-    
+
+        .left {
+            margin-left: 30px;
             display: flex;
             flex-direction: row;
+            justify-content: center !important;
 
+            .tabbaritem {
+                margin-right: 25px;
+
+                div {
+                    margin-top: 3px;
+                    width: 30px;
+                    height: 30px;
+                    vertical-align: middle;
+                    display: inline-block;
+                    background: url(@/assets/img/detail/detail_bottom.png) no-repeat;
+                }
+
+                .icon1 {
+                    width: 30px;
+                    height: 30px;
+                    background-position: 0 -72px;
+                    background-size: 30px;
+                }
+
+                .icon2 {
+                    width: 30px;
+                    height: 30px;
+                    background-position: 0 -135px;
+                    background-size: 30px;
+                }
+
+                .icon3 {
+                    width: 31px;
+                    height: 31px;
+                    background-position: 0 0px;
+                    background-size: 30px;
+                }
+
+                .icon3 {
+                    width: 31px;
+                    height: 31px;
+                    background-position: 0 -36px;
+                    background-size: 30px;
+                }
+
+                h5 {
+                    font-size: 16px;
+                    font-weight: 400;
+                    color: rgb(179, 179, 179);
+                }
+            }
         }
 
         .right {
-            width: 180px;
             display: flex;
             flex-direction: row;
-            .car{
-                padding:15px;
-                background-color: pink;
-            }
-            .buy{
-                padding:15px;
-                background-color: yellow;
 
+            .car {
+                padding: 15px;
+                font-weight: 400;
+                background-color: yellow;
+            }
+
+            .buy {
+                padding: 15px;
+                font-weight: 400;
+                background-color: pink;
+                color: white;
             }
         }
     }
 
 
 
-    img {
-        margin-top: 3px;
-        width: 22px;
-        height: 22px;
-        vertical-align: middle;
-    }
 
     h5 {
         font-size: 17px;
