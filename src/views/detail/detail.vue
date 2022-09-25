@@ -5,6 +5,7 @@
         <Detailinfo :GoodsInfo="GoodsInfo"></Detailinfo>
         <DetailShop :shopInfo="shopInfo"></DetailShop>
         <Detailgoods :goodsDetail="goodsDetail"></Detailgoods>
+        <Detailparams :GoodsParams="GoodsParams"></Detailparams>
     {{id}}
     </div>
 </template>
@@ -13,11 +14,13 @@
 
 
 import Detailbar from '@/components/content/navbar/Detailbar.vue';
-import {getDetail,GoodsInfo,ShopInfo} from '@/network/detail'
+import {getDetail,GoodsInfo,ShopInfo,GoodsParam} from '@/network/detail'
+
 import DetailSwiper from './chilidComps/DetailSwiper.vue';
 import Detailinfo from './chilidComps/detailinfo.vue';
 import DetailShop from './chilidComps/DetailShop.vue';
 import Detailgoods from './chilidComps/Detailgoods.vue';
+import Detailparams from './chilidComps/Detailparams.vue';
 export default {
     name:"detail",
     data() {
@@ -26,7 +29,8 @@ export default {
           topimages:[],
           GoodsInfo:null,
           shopInfo:null,
-          goodsDetail:null  
+          goodsDetail:null,
+          GoodsParams:null  
         }
         
     },
@@ -39,11 +43,12 @@ export default {
                 this.GoodsInfo=new GoodsInfo(res.result.itemInfo,res.result.columns,res.result.shopInfo.services)
                 this.shopInfo=new ShopInfo(res.result.shopInfo)
                 this. goodsDetail=res.result.detailInfo
+                this.GoodsParams=new GoodsParam(res.result.itemParams.info,res.result.itemParams.rule)
             }).catch((err)=>{
                 console.log(err);
             })
     },
-    components: { Detailbar, DetailSwiper, Detailinfo, DetailShop, Detailgoods }
+    components: { Detailbar, DetailSwiper, Detailinfo, DetailShop, Detailgoods, Detailparams }
 }
 </script>
 
