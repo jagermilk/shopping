@@ -7,6 +7,11 @@ export function getDetail(iid){
         }
     })
 }
+export function getrecommend(){
+    return request({
+        url:'/recommend'
+    })
+}
 export class GoodsInfo{
     constructor(iteminfo,columns,services){
         this.title=iteminfo.title
@@ -31,8 +36,17 @@ export class ShopInfo{
 }
 export class GoodsParam{
     constructor(info,rule){
-        this.image=info.images ? info.images[0]:'',
+        this.image=info.images? info.images[0]:'',
         this.infos=info.set
         this.sizes=rule.tables
+    }
+}
+export class commend{
+    constructor(rate){
+        if(rate.cRate!==0){
+          this.rate=rate.cRate,
+            this.list=rate.list[0]          
+        }
+        
     }
 }

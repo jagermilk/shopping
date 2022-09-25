@@ -2,37 +2,21 @@
     <div class="detailparams">
         <div class="rule">
             <table width="100%"  v-for="table in GoodsParams.sizes">
-                <tr v-for="tr in table" :key="item">
-                    <td v-for="item in tr">{{item}}</td>
+                <tr v-for="tr in table" :key="tr">
+                    <td v-for="cate in tr">{{cate}}</td>
                 </tr>
             </table>
         </div>
         <div class="info">
             <table width="100%">
-                <tr v-for="item in GoodsParams.infos" :key="item">
-                    <td width="25%">{{item.key}}</td>
-                    <td class="pink">{{item.value}}</td>
+                <tr v-for="cate in GoodsParams.infos" :key="cate">
+                    <td width="25%">{{cate.key}}</td>
+                    <td class="pink">{{cate.value}}</td>
                 </tr>
             </table>
         </div>
 
-        <ul>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-        </ul>
+       
     </div>
 </template>
 

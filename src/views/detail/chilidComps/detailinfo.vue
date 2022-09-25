@@ -30,7 +30,7 @@
     export default {
         props:{
             GoodsInfo:{
-                type:Array,
+                type:Object,
                 default(){
                     return {}
                 }

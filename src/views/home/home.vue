@@ -7,56 +7,7 @@
         <Tabcontrol :title="title" class="tab-control" @getgoodsname="getgoodsname"></Tabcontrol>
         <Goodslist :goods="goods[goodsname]"></Goodslist>
         <Backtop @click.native="backclick" v-show="isshow"></Backtop>
-        <ul>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-            <li>1</li>
-        </ul>
+        <Maintabbar></Maintabbar>
     </div>
 </template>
 
@@ -70,6 +21,7 @@ import Backtop from '@/components/content/backtop/backtop.vue';
 
 import RecommendView from './childComps/RecommendView.vue';
 import FeatureView from './childComps/featureView.vue';
+import Maintabbar from '@/components/content/tabbar/Maintabbar.vue';
 
 export default {
     data() {
@@ -156,7 +108,7 @@ export default {
         }
 
     },
-    components: { Mainnavbar, HomeSwiper, RecommendView, FeatureView, Tabcontrol, Goodslist, Backtop }
+    components: { Mainnavbar, HomeSwiper, RecommendView, FeatureView, Tabcontrol, Goodslist, Backtop, Maintabbar }
 }
 
 

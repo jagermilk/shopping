@@ -31,9 +31,9 @@
     export default {
         props:{
             shopInfo:{
-                type:Array,
+                type:Object,
                 default(){
-                    return []
+                    return {}
                 }
             }
         }
@@ -42,7 +42,7 @@
 
 <style lang="less" scoped>
     .DetailShop{
-        width: 90%;
+        width: 95%;
         margin: 0 auto;
         padding: 5px 0px 0px 5px ;
         display: flex;

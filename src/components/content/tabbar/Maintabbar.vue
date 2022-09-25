@@ -65,7 +65,7 @@ export default {
     .tabbaritem {
     flex: 1;
     text-align: center;
-
+    width: 100%;
     img {
       margin-top: 3px;
       width: 22px;

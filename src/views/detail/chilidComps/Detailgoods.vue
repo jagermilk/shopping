@@ -4,10 +4,8 @@
         <div>{{goodsDetail.detailImage[0].key}}</div>
         </div>
         <div class="imgs">
-
-            
-            <template v-for="item in goodsDetail.detailImage[0].list" :key="item">
-               <img :src="item" alt=""/>
+            <template v-for="cate in goodsDetail.detailImage[0].list" :key="cate">
+               <img :src="cate" alt=""/>
             </template>
             
         </div>
@@ -18,7 +16,7 @@
     export default {
         props:{
             goodsDetail:{
-                type:Array,
+                type:Object,
                 default(){
                     return {}
                 }
