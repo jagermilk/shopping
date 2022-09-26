@@ -8,7 +8,7 @@
         <Detailparams :GoodsParams="GoodsParams" ref="params"></Detailparams>
         <DetailCommend :Commend="Commend" ref="commend"></DetailCommend>
         <Recommend :goods="recommend" ref="recommend"></Recommend>
-        <Detailbottombar></Detailbottombar>
+        <Detailbottombar @addcar="addcar"></Detailbottombar>
     {{id}}
     <ul>
             <li>1</li>
@@ -103,7 +103,18 @@ export default {
                 this.currentIndex=3
             }
             this.$refs.tabbar.currentIndex=this.currentIndex
-            console.log(this.$refs.tabbar.currentIndex);
+        },
+        addcar(){
+            //获取商品信息
+            const product={}
+            product.image=this.topimages[0],
+            product.title=this.GoodsInfo.title,
+            product.desc=this.GoodsInfo.desc
+            product.price=this.GoodsInfo.lowNowPrice
+            product.iid=this.iid
+            //保存在vuex
+            this.$store.dispatch('addcarlist',product)
+            //拿给购物车使用
         }
     },
     components: { Detailbar, DetailSwiper, Detailinfo, DetailShop, Detailgoods, Detailparams, DetailCommend, Recommend, Detailbottombar }

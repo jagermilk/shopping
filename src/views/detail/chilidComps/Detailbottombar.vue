@@ -2,7 +2,7 @@
     <div class="bottombar">
         <Tabbar>
             <div class="left">
-                <Tabbaritem link="/home">
+                <Tabbaritem link="">
                     <template v-slot:item-icon>
                         <div class="icon1"></div>
                     </template>
@@ -14,7 +14,7 @@
                     </template>
                 </Tabbaritem>
 
-                <Tabbaritem link="/goods">
+                <Tabbaritem link="">
                     <template v-slot:item-icon>
                         <div class="icon2"></div>
                     </template>
@@ -25,7 +25,7 @@
                         <h5>店铺</h5>
                     </template>
                 </Tabbaritem>
-                <Tabbaritem link="/car">
+                <Tabbaritem link="">
                     <template v-slot:item-icon>
                         <div class="icon3"></div>
                     </template>
@@ -38,7 +38,7 @@
                 </Tabbaritem>
             </div>
             <div class="right">
-                <div class="car">加入购物车</div>
+                <div class="car" @click="addcar">加入购物车</div>
                 <div class="buy">购买</div>
             </div>
 
@@ -53,6 +53,11 @@ export default {
     data() {
         return {}
     },
+    methods:{
+        addcar(){
+            this.$emit('addcar')
+        }
+    },
     components: { Tabbar, Tabbaritem }
 }
 </script>
@@ -61,7 +66,8 @@ export default {
 .bottombar {
     height: 49px;
     width: 100%;
-
+    position: fixed;
+    z-index: 99;
     .tabbar {
         display: flex;
         flex-direction: row;
@@ -101,15 +107,15 @@ export default {
                 }
 
                 .icon3 {
-                    width: 31px;
-                    height: 31px;
+                    width: 30px;
+                    height: 30px;
                     background-position: 0 0px;
                     background-size: 30px;
                 }
 
-                .icon3 {
-                    width: 31px;
-                    height: 31px;
+                .icon4 {
+                    width: 30px;
+                    height: 30px;
                     background-position: 0 -36px;
                     background-size: 30px;
                 }

@@ -7,11 +7,12 @@
         <Tabcontrol :title="title" class="tab-control" @getgoodsname="getgoodsname"></Tabcontrol>
         <Goodslist :goods="goods[goodsname]"></Goodslist>
         <Backtop @click.native="backclick" v-show="isshow"></Backtop>
-        <Maintabbar></Maintabbar>
+
     </div>
 </template>
 
 <script>
+
 import { getHomeMultidata, getHomeGoods } from 'network/home'
 import Mainnavbar from '@/components/content/navbar/Mainnavbar.vue'
 import HomeSwiper from './childComps/HomeSwiper.vue';
@@ -21,7 +22,7 @@ import Backtop from '@/components/content/backtop/backtop.vue';
 
 import RecommendView from './childComps/RecommendView.vue';
 import FeatureView from './childComps/featureView.vue';
-import Maintabbar from '@/components/content/tabbar/Maintabbar.vue';
+
 
 export default {
     data() {
@@ -108,7 +109,8 @@ export default {
         }
 
     },
-    components: { Mainnavbar, HomeSwiper, RecommendView, FeatureView, Tabcontrol, Goodslist, Backtop, Maintabbar }
+
+    components: { Mainnavbar, HomeSwiper, RecommendView, FeatureView, Tabcontrol, Goodslist, Backtop }
 }
 
 

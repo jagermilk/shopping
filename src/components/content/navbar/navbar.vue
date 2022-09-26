@@ -14,8 +14,8 @@ export default {
 
 <style lang="less" scoped>
     .navbar{
-        background-image: linear-gradient(200grad, rgb(255, 190, 190), rgb(255, 209, 209));
-        color: rgb(66, 66, 66);
+        background-image: linear-gradient(200grad, rgb(255, 149, 149), rgb(255, 209, 209));
+        color: rgb(255, 255, 255);
         height: 50px;
         line-height: 50px;
         width: 100%;

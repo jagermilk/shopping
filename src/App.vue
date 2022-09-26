@@ -5,18 +5,19 @@
       </router-view>
       
     </keep-alive>
-
+<Maintabbar></Maintabbar>
     
   </div>
 </template>
 
 <script>
 import Navbar from './components/content/navbar/navbar.vue';
+import Maintabbar from './components/content/tabbar/Maintabbar.vue';
 
 export default {
 
 
-  components: { Navbar,  }
+  components: { Navbar, Maintabbar }
 }
 </script>
 

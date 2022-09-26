@@ -11,7 +11,12 @@
                         {{item}}</div>
                 </div>
             </template>
-            <template #right></template>
+            <template #right>
+                <div class="car" @click="this.$router.push('/car')">
+                    <img src="@/assets/img/detail/cart.png" alt="">
+                    <span>{{carmount}}</span>
+                </div>
+            </template>
         </Navbar>
     </div>
 
@@ -19,7 +24,7 @@
 
 <script>
 import Navbar from './navbar.vue';
-
+import { mapGetters } from 'vuex';
 export default {
     created() {
 
@@ -43,6 +48,9 @@ export default {
             this.$router.go(-1)
         }
     },
+    computed:{
+        ...mapGetters(['carmount'])
+    },
     components: { Navbar }
 }
 </script>
@@ -64,7 +72,16 @@ export default {
         }
     }
 }
-
+.car{
+    img{
+        width: 50px;
+    }
+    span{
+        font-size: 20px;
+       color: rgb(0, 0, 0); 
+    }
+    
+}
 .active {
     color: rgb(255, 151, 151) !important;
 }

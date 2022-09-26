@@ -7,7 +7,6 @@
             <div v-if="active">
                 <slot name="item-icon-active"></slot>
             </div>
-
             <div :class="{isActive:active}">
                 <slot name="item-name"></slot>
             </div>
