@@ -6,7 +6,7 @@
         <FeatureView></FeatureView>
         <Tabcontrol :title="title" class="tab-control" @getgoodsname="getgoodsname"></Tabcontrol>
         <Goodslist :goods="goods[goodsname]"></Goodslist>
-        <Backtop @click.native="backclick" v-show="isshow"></Backtop>
+        <Backtop v-show="showback" @isshow="isshow"></Backtop>
 
     </div>
 </template>
@@ -27,7 +27,7 @@ import FeatureView from './childComps/featureView.vue';
 export default {
     data() {
         return {
-            isshow:false,
+            showback:false,
             banners: [],
             recommends: [],
             title: ['流行', '新款', '精选'],
@@ -46,14 +46,12 @@ export default {
         this.getHomeGoods('new')
         this.getHomeGoods('sell')
     },
-    mounted: function () {
-        window.addEventListener('scroll', this.handleScroll, false); // 监听（绑定）滚轮滚动事件
-      },
-    destroyed: function () {
-        window.removeEventListener('scroll', this.handleScroll);   //  离开页面清除（移除）滚轮滚动事件
-      },
+
     
     methods: {
+        isshow(payload) {
+            this.showback = payload
+        },
         getHomeMultidata() {
             getHomeMultidata().then((res) => {
                 this.banners = res.data.banner.list
@@ -85,28 +83,7 @@ export default {
                     this.goodsname = 'sell'
             }
         },
-        backclick() {
-            window.scrollTo(0, 0)
-        },
-        handleScroll() {
-            let clientHeight = document.documentElement.clientHeight || document.body.clientHeight;  
-            // 设备/屏幕高度
-            let scrollObj = document.getElementsByClassName("home"); // 滚动区域
-            let scrollTop = window.pageYOffset; // div 到头部的距离
-            let scrollHeight = scrollObj.scrollHeight; // 滚动条的总高度
-            //滚动条到底部的条件
-            if(scrollTop+clientHeight == scrollHeight){
-                // div 到头部的距离 + 屏幕高度 = 可滚动的总高度
-            }
-            if(scrollTop>=600){
-                console.log(111);
-                this.isshow=true
-            }
-            if(scrollTop<600){
-                console.log(222);
-                this.isshow=false
-            }  
-        }
+        
 
     },
 

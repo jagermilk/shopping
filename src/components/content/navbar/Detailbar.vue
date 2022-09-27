@@ -73,14 +73,16 @@ export default {
     }
 }
 .car{
-    img{
-        width: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  img{
+        width: 30px;
     }
     span{
         font-size: 20px;
-       color: rgb(0, 0, 0); 
-    }
-    
+        color: rgb(255, 255, 255);
+    }  
 }
 .active {
     color: rgb(255, 151, 151) !important;

@@ -33,6 +33,7 @@ export default {
             text-align: center;
         }
         .middle{
+            font-size:27px;
             height: 50px;
             flex:1;
             text-align: center;

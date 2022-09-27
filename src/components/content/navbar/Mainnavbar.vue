@@ -34,12 +34,15 @@ import Navbar from './navbar.vue';
     z-index: 9;
 }
 .car{
+    display: flex;
+    justify-content: center;
+    align-items: center;
   img{
-        width: 50px;
+        width: 30px;
     }
     span{
         font-size: 20px;
-        color: rgb(0, 0, 0);
+        color: rgb(255, 255, 255);
     }  
 }
 

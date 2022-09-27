@@ -1,7 +1,7 @@
 <template>
     <div class="carbottom">
         <div class="checkbox">
-            <input type="checkbox">
+            <input type="checkbox" :checked="allchecked" @click="checkclick">
             <span>全选</span>
         </div>
         <div class="total">
@@ -17,7 +17,25 @@
     import { mapGetters } from 'vuex';
     export default {
         computed:{
-            ...mapGetters(['allprice'])
+            ...mapGetters(['allprice']),
+            allchecked(){
+                if(this.$store.state.cartlist.length!==0){
+                   return !(this.$store.state.cartlist.filter(item=>!item.checked).length) 
+                }
+                else{
+                    return false
+                }
+            }
+        },
+        methods:{
+            checkclick(){
+                if(this.allchecked){
+                    this.$store.commit('allunchecked')
+                }
+                else{
+                    this.$store.commit('allchecked')
+                }
+            }
         }
     }
 </script>
